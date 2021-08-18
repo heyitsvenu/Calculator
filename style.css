@@ -1,0 +1,84 @@
+:root {
+  --white: #ffffff;
+  --gray: #c1cad6;
+  --blue: #66c7f4;
+  --violet: #6c6ea0;
+  --pink: #ff1053;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: auto;
+  place-content: center;
+  background-color: var(--blue);
+}
+
+main {
+  width: 300px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white);
+  border: 5px solid white;
+}
+
+#display {
+  height: 50px;
+  margin-bottom: 10px;
+  background-color: var(--white);
+  border-radius: 5px;
+  padding-right: 5px;
+  font-size: 20px;
+  text-align: right;
+}
+
+#keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-gap: 5px;
+}
+
+.key {
+  width: auto;
+  height: 50px;
+  border: none;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  border-radius: 5px;
+  transition: all 0.07s;
+  cursor: pointer;
+}
+
+.key:hover {
+  transform: scale(1.05);
+}
+
+.span-2 {
+  grid-column: span 2;
+}
+
+.clear,
+.del,
+.decimals,
+.equals {
+  background-color: var(--gray);
+}
+
+.operator {
+  background-color: var(--violet);
+}
+
+.number {
+  background-color: var(--pink);
+}
